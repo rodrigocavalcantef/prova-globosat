@@ -1,0 +1,198 @@
+@import 'styles';
+
+$break-large: 680px;
+$break-medium: 568px;
+$break-medium-small: 480px;
+$break-small: 380px;
+
+@media screen and(max-width: $break-large) {
+	.slider-content {
+		.text-content {
+			width: 80%;
+			h2 {
+				/*font-size: 2.6em;*/
+			}
+			.btn {
+				font-size: 2em;
+				/*margin-top: 30px;*/
+			}
+		}
+	}
+	.events {
+		.btn {
+			font-size: 3em;
+		}
+	}
+	.combate-play {
+		h3 {
+			/*font-size: 1.6em;*/
+		}
+	}
+	.footer {
+		.logo {
+			float: none;
+		}
+		.footer-menu {
+			justify-content: left;
+			margin: 20px 0;
+			padding: 0;
+		}
+	}
+}
+
+@media screen and (max-width: $break-medium) {
+	.header {
+		background-size: contain;
+		.header.menu {
+			height: 40px;
+		}
+	}
+	.slider-content {
+		.text-content {
+			width: 90%;
+			h2 {
+				font-size: 2.4em;
+			}
+			.btn {
+				width: 60%;
+				margin-top: 20px;
+			}
+		}
+	}
+	.coverage, .events {
+		h2 {
+			font-size: 2.8em;
+		}
+	}
+	.events {
+		.btn {
+			font-size: 2.6em;
+		}
+	}
+}
+
+@media screen and (max-width: $break-medium-small) {
+	.slider-content {
+		.text-content {
+			width: 100%;
+			left: 0;
+			text-align: $center-align;
+			h2 {
+				font-size: 1.8em;
+			}
+			.btn {
+				font-size: 1.4em;
+				margin: 20px auto auto;
+			}
+		}
+	}
+	.coverage, .events {
+		h2 {
+			font-size: 2.5em;
+		}
+	}
+	.coverage {
+		h3 {
+			font-size: 2em;
+		}
+	}
+	.events {
+		h2 {
+			padding: 0 20px;
+		}
+		.slider-content {
+			.swiper-slide {
+				width: inherit !important;
+				p {
+					font-size: 1.8em;
+				}
+			}
+		}
+		.btn {
+			font-size: 2em;
+		}
+	}
+	.combate-play {
+		h3 {
+			font-size: .8em;
+		}
+		a {
+			font-size: .7em;
+		}
+	}
+	.operator {
+		h4 {
+			font-size: 1.5em;
+		}
+	}
+	.footer {
+		.footer-menu {
+			li {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: $break-small) {
+	.slider-content {
+		.text-content {
+			top: 15px;
+			h2 {
+				font-size: 1.4em;
+			}
+			.btn {
+				font-size: 1em;
+				margin-top: 20px;
+				padding: 10px 0;
+			}
+		}
+		.swiper-container-horizontal > .swiper-pagination-bullets, .slider-content .swiper-pagination-custom, .slider-content .swiper-pagination-fraction {
+			bottom: 10px;
+		}
+	}
+	.coverage, .events {
+		h2 {
+			font-size: 2em;
+		}
+	}
+	.coverage {
+		h3 {
+			font-size: 1.5em;
+		}
+	}
+	.events {
+		.slider-content {
+			.swiper-slide {
+				p {
+					font-size: 1.2em;
+				}
+			}
+		}
+		.btn {
+			font-size: 1.2em;
+		}
+	}
+	.combate-play {
+		h3 {
+			font-size: .6em;
+		}
+		a {
+			font-size: .5em;
+		}
+	}
+	.operator {
+		h4 {
+			font-size: 1.2em;
+		}
+	}
+	.footer {
+		.logo {
+			font-size: 1.4em;
+		}
+		.footer-menu {
+			font-size: .7em;
+		}
+	}
+}

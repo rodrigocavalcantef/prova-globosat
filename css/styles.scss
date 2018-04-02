@@ -1,0 +1,262 @@
+/*Variáveis*/
+$header-background: #f3f3f3;
+$sign-background: #d32127;
+$white-color: #fff;
+$transform-text: uppercase;
+$decoration-text: none;
+$center-align:  center;
+$align-display: block;
+$bold-font: 700;
+$regular-font: 300;
+$title-color: #3c3c3b;
+$title-size: 3.2em;
+$image-size: 100%;
+
+/*Mixins*/
+@mixin btn-sign {
+	background-color: $sign-background;
+	color: $white-color;
+	text-transform: $transform-text;
+	text-decoration: $decoration-text;
+	text-align: $center-align;
+	display: $align-display;
+	font-weight: $bold-font;
+}
+@mixin center-title {
+	font-size: $title-size;
+	font-weight: $bold-font;
+	color: $title-color;
+	text-align: $center-align;
+	text-transform: $transform-text;
+}
+
+/*Global*/
+body {
+	font-family: 'proxima_nova', Arial, sans-serif;
+	max-width: 100%;
+	overflow-x: hidden;
+}
+.container {
+	width: 90%;
+	display: block;
+	margin: 0 auto;
+}
+
+/*Header*/
+.header {
+	width: $image-size;
+	background-repeat: no-repeat;
+	background-color: $header-background;
+	background-position: top center;
+	background-size: cover;
+	.header.top {
+		height: 70px;
+		background-image: url('../img/background-header.jpg');
+	}
+	.header.menu {
+		height: 75px;
+		background-image: url('../img/background-menu.jpg');
+	}
+}
+
+/*Slider*/
+.slider-content {
+	background-color: #fff;
+		img {
+			width: $image-size;
+		}
+		.swiper-pagination-bullet {
+			width: 10px;
+			height: 10px;
+			background: #ccc;
+			opacity: 1;
+		}
+		.swiper-pagination-bullet-active {
+			background: #d31b02;
+		}
+		.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+			bottom: 30px;
+		}
+	.text-content {
+		width: 60%;
+		position: absolute;
+		top: 30px;
+		left: 30px;
+		h2 {
+			font-size: 2.8em;
+			font-weight: 700;
+			color: #FFF;
+			margin: 5px 0;
+			text-transform: uppercase;
+			span {
+				font-size: .9em;
+				display: block;	
+				color: #ffc617;
+			}
+		}
+	}
+	.btn {
+		@include btn-sign;
+		width: 80%;
+		font-size: 2.2em;
+		margin-top: 50px;
+		padding: 20px 0;
+	}
+}
+
+/*Coverage*/
+.coverage {
+	background-color: #fff;
+	text-align: $center-align;
+	h2 {
+		@include center-title;
+		padding: 30px 30px 0;
+	}
+	h3 {
+		font-weight: $regular-font;
+		font-size: 2.2em;
+		strong {
+			font-weight: $bold-font;
+		}
+	}
+}
+
+/*Events*/
+.events {
+	background-color: #fff;
+	padding-top: 20px;
+	h2 {
+		@include center-title;
+	}
+	.slider-content {
+		img {
+			width: 80%;
+			display: block;
+			margin: 0 auto;
+		}
+		.swiper-slide {
+			width: 800px !important;
+			p {
+				font-size: 2.2em;
+				font-weight: $regular-font;
+				text-align: $center-align;
+				color: #000;
+				text-transform: $transform-text;
+				strong {
+					font-weight: $bold-font;
+					.red {
+						color: #d31e05;
+					}
+				}
+			}
+			.category {
+				margin-bottom: 0;
+			}
+			.fight {
+				margin-top: 0;
+			}
+		}
+		.mask {
+			width: $image-size;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: linear-gradient(to right, transparent, white);
+			z-index: 2;
+		}
+	}
+	.btn {
+		@include btn-sign;
+		width: 60%;
+		font-size: 3.8em;
+		margin: 50px auto auto;
+		padding: 20px 0;
+	}
+}
+
+/*Combate Play*/
+.combate-play {
+	background-color: #fff;
+	margin: 115px 0;
+	text-transform: $transform-text;
+	text-align: $center-align;
+	color: #333;
+	font-size: 2em;
+	img {
+		max-width: $image-size;
+		display: $align-display;
+		margin: 0 auto 50px;
+	}
+	h3 {
+		margin: 0;
+	}
+	a {
+		font-size: 1.17em;
+		color: $sign-background;
+		display: $align-display;
+		font-weight: $bold-font;
+		margin-top: 20px;
+		text-decoration: $decoration-text;
+	}
+}
+
+/*Operator*/
+.operator {
+	background-color: $header-background;
+	padding: 40px 0;
+	h4 {
+		font-size: 2em;
+		color: $title-color;
+		text-align: $center-align;
+		margin: 0 0 50px;
+		padding: 0 20px;
+	}
+	img {
+		max-width: $image-size;
+		display: $align-display;
+		margin: 0 auto;	
+	}
+}
+
+/*Footer*/
+.footer {
+	background-color: #404040;
+	padding: 20px 0;
+	.logo {
+		font-size: 1.6em;
+		font-weight: $bold-font;
+		color: $white-color;
+		float: left;
+	}
+	.footer-menu {
+		font-size: 1em;
+		font-weight: $bold-font;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		list-style: none;
+		margin: 0;
+		li {
+			border-right: 1px solid #fff;
+			margin-right: 5px;
+			padding: 0 10px;
+			&:last-child {
+				border-right: none;
+			}
+			a {
+				display: $align-display;
+				text-align: $center-align;
+				color: $white-color;
+				text-decoration: $decoration-text;
+			}
+		}
+	}
+	.copyright {
+		color: $white-color;
+		margin-top: 30px;
+		padding-top: 20px;
+		border-top: 1px solid #525252;
+		clear: both;
+	}
+}
